@@ -6,7 +6,7 @@
 
     <groupId>com.example</groupId>
     <artifactId>simple</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <name>[Micronaut] Simple Example</name>
     <description>Micronaut: Simple example</description>

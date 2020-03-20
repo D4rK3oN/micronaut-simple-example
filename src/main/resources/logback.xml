@@ -3,7 +3,7 @@
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
             <pattern>
-                %green(%d{"yyyy-MM-dd HH:mm:ss,SSS"}) %highlight([%-5level]) %magenta([%thread]) %yellow([%logger{36}:) %cyan(%line) %yellow(]) : %msg%n
+                %green(%d{"yyyy-MM-dd HH:mm:ss,SSS"}) %highlight([%-5level]) %magenta([%thread]) %yellow([ %logger{36}:) %cyan(%line) %yellow(]) : %msg%n
             </pattern>
         </encoder>
     </appender>
@@ -26,7 +26,12 @@
         </encoder>
     </appender>
 
-    <logger name="com.example.simple" level="TRACE">
+    <logger name="com.example.simple" level="DEBUG">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="FILE"/>
+    </logger>
+
+    <logger name="io.micronaut" level="INFO">
         <appender-ref ref="STDOUT"/>
         <appender-ref ref="FILE"/>
     </logger>
